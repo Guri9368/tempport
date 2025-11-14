@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
 
 function SpinningBox() {
-  const meshRef = useRef<THREE.Mesh>(null!);
+const meshRef = useRef<THREE.Mesh>(null);
+
 
   // Rotate the cube every frame
   useFrame(({ clock }) => {
